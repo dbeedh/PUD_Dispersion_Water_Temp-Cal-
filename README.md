@@ -22,9 +22,3 @@ Where:
 2. Enter the target temperature and total volume required.
 3. Use the formula to calculate the required volumes.
 4. Ensure the temperature probe is fully submerged and centered in the IBC.
-
-## 🌐 Live Dashboard
-Click here to view the dashboard
-
-## 👤 Author
-Danesh Beedh
