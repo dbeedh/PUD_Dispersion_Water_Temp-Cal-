@@ -398,7 +398,7 @@
             if (t3 > 18) {
                 const warning = document.createElement('div');
                 warning.className = 'alert alert-danger dynamic-warning';
-                warning.innerHTML = '<span class="icon">🚨</span><div><strong>DANGER:</strong> Target temperature above 18°C will cause dispersion failure!</div>';
+                warning.innerHTML = '<span class="icon">🚨</span><div><strong>DANGER:</strong> Target temperature above °C will cause dispersion failure!</div>';
                 document.querySelector('.warning-section').appendChild(warning);
             } else if (t3 > 16) {
                 const warning = document.createElement('div');
@@ -499,7 +499,7 @@
                     if (inputId === 't1') {
                         validateInput(input, 2.5, 5, msgElement, 'Chilled water temperature');
                     } else if (inputId === 't2') {
-                        validateInput(input, 18, 30, msgElement, 'Towns water temperature');
+                        validateInput(input, 15, 30, msgElement, 'Towns water temperature');
                     } else if (inputId === 't3') {
                         validateInput(input, 10, 20, msgElement, 'Target temperature');
                     } else if (inputId === 'v3') {
