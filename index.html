@@ -299,7 +299,7 @@
                 <div class="input-group">
                     <div class="form-group">
                         <label for="t1">Chilled Water Temperature (T1) °C</label>
-                        <input type="number" id="t1" step="0.1" min="2.5" max="5" placeholder="2.5 - 5.0">
+                        <input type="number" id="t1" step="0.1" min="2.5" max="10" placeholder="2.5 - 10.0">
                         <div class="validation-msg" id="t1-msg"></div>
                     </div>
                     
@@ -427,7 +427,7 @@
             const v3Msg = document.getElementById('v3-msg');
             
             // Validate inputs
-            const t1 = validateInput(t1Input, 2, 5, t1Msg, 'Cold water temperature');
+            const t1 = validateInput(t1Input, 2, 10, t1Msg, 'Cold water temperature');
             const t2 = validateInput(t2Input, 15, 35, t2Msg, 'Towns water temperature');
             const t3 = validateInput(t3Input, 10, 20, t3Msg, 'Target temperature');
             const v3 = validateInput(v3Input, 1000, 3000, v3Msg, 'Total volume');
@@ -490,7 +490,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const inputs = ['t1', 't2', 't3', 'v3'];
             const ranges = {
-                't1': {min: 2, max: 5, label: 'Cold water temperature'},
+                't1': {min: 2, max: 10, label: 'Cold water temperature'},
                 't2': {min: 15, max: 35, label: 'Towns water temperature'},
                 't3': {min: 10, max: 20, label: 'Target temperature'},
                 't3': {min: 1000, max: 3000, label: 'Total volume'}
@@ -502,7 +502,7 @@
                 
                 input.addEventListener('input', function() {
                     if (inputId === 't1') {
-                        validateInput(input, 2.5, 5, msgElement, 'Chilled water temperature');
+                        validateInput(input, 2.5, 10, msgElement, 'Chilled water temperature');
                     } else if (inputId === 't2') {
                         validateInput(input, 15, 30, msgElement, 'Towns water temperature');
                     } else if (inputId === 't3') {
