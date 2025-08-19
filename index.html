@@ -430,7 +430,7 @@
             const t1 = validateInput(t1Input, 2, 5, t1Msg, 'Cold water temperature');
             const t2 = validateInput(t2Input, 15, 35, t2Msg, 'Towns water temperature');
             const t3 = validateInput(t3Input, 10, 20, t3Msg, 'Target temperature');
-            const v3 = validateInput(v3Input, 100, 5000, v3Msg, 'Total volume');
+            const v3 = validateInput(v3Input, 1000, 3000, v3Msg, 'Total volume');
             
             // Check if all inputs are valid
             if (t1 === null || t2 === null || t3 === null || v3 === null) {
@@ -493,7 +493,7 @@
                 't1': {min: 2, max: 5, label: 'Cold water temperature'},
                 't2': {min: 15, max: 35, label: 'Towns water temperature'},
                 't3': {min: 10, max: 20, label: 'Target temperature'},
-                't3': {min: 100, max: 5000, label: 'Total volume'}
+                't3': {min: 1000, max: 3000, label: 'Total volume'}
             };
             
             inputs.forEach(inputId => {
@@ -508,7 +508,7 @@
                     } else if (inputId === 't3') {
                         validateInput(input, 10, 20, msgElement, 'Target temperature');
                     } else if (inputId === 'v3') {
-                        validateInput(input, 100, 5000, msgElement, 'Total volume');
+                        validateInput(input, 1000, 3000, msgElement, 'Total volume');
                     }
                 });
                 
